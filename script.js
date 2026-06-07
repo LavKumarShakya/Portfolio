@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const btnText = submitBtn.querySelector('.btn-text');
             const btnLoader = submitBtn.querySelector('.btn-loader');
             const btnIcon = submitBtn.querySelector('.fa-paper-plane');
-            
+
             if (btnText) btnText.style.display = 'none';
             if (btnLoader) btnLoader.style.display = 'inline';
             if (btnIcon) btnIcon.style.display = 'none';
@@ -345,10 +345,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== SKILL TAG HOVER RIPPLE =====
     document.querySelectorAll('.skill-tag').forEach(tag => {
-        tag.addEventListener('mouseenter', function() {
+        tag.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.05)';
         });
-        tag.addEventListener('mouseleave', function() {
+        tag.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     });
@@ -356,22 +356,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== NAVBAR ACTIVE LINK ON SCROLL =====
     updateActiveNavLink();
-
-    // ===== CLICKABLE PROJECT CARDS =====
-    projectCards.forEach(card => {
-        card.style.cursor = 'pointer';
-        card.addEventListener('click', (e) => {
-            if (e.target.closest('a')) return;
-
-            let linkEl = card.querySelector('a[aria-label="View live project"]');
-            if (!linkEl || linkEl.getAttribute('href') === '#') {
-                linkEl = card.querySelector('a[aria-label="View source code"]');
-            }
-
-            if (linkEl && linkEl.getAttribute('href') !== '#') {
-                window.open(linkEl.getAttribute('href'), '_blank');
-            }
-        });
-    });
 
 });
