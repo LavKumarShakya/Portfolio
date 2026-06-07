@@ -1,509 +1,701 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lav Kumar Shakya - Software Developer & Tech Explorer</title>
-    <meta name="description" content="Personal portfolio of Lav Kumar Shakya - A passionate developer exploring C++, Python, and Java.">
-    
+    <title>Lav Kumar Shakya — CS Student · AI & Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Lav Kumar Shakya — Computer Science student building AI-powered solutions, RAG systems, and modern web applications. Passionate about ML, Cyber Security, and Cloud Technologies.">
+    <meta name="keywords" content="Lav Kumar Shakya, AI Developer, Full-Stack, Machine Learning, RAG, Portfolio">
+    <meta name="author" content="Lav Kumar Shakya">
+    <meta property="og:title" content="Lav Kumar Shakya — CS Student · AI & Full-Stack Developer">
+    <meta property="og:description" content="Building AI-powered solutions, RAG systems, and modern web applications.">
+    <meta property="og:type" content="website">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Loading screen -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-line"></div>
+            <span class="loader-text">LKS</span>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">LKS</a>
-            </div>
-            
+            <a href="#hero" class="nav-logo" id="nav-logo">
+                <span class="logo-text">LKS</span>
+                <span class="logo-dot"></span>
+            </a>
+
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#skills" class="nav-link">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#certificates" class="nav-link">Certificates</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certs</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                
-                <div class="nav-actions">
-                    <a href="#" class="btn btn-outline">Resume</a>
-                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                        <span class="sun-icon">☀️</span>
-                        <span class="moon-icon">🌙</span>
-                    </button>
-                </div>
             </div>
-            
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+
+            <div class="nav-actions">
+                <a href="resume/Resume_1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" id="resume-btn">
+                    <i class="fas fa-download"></i>
+                    <span>Resume</span>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="hero-gradient"></div>
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-            </div>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid-pattern"></div>
+            <div class="hero-gradient-orb hero-orb-1"></div>
+            <div class="hero-gradient-orb hero-orb-2"></div>
+            <div class="hero-gradient-orb hero-orb-3"></div>
+            <div class="hero-noise"></div>
         </div>
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Lav Kumar Shakya</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        BTech CSE undergrad '27 | Technical Coordinator at GDG on Campus, SRMCEM | Python Developer | Problem Solver | Passionate about Technology & Innovation
+                <div class="hero-badge reveal-up">
+                    <span class="badge-dot"></span>
+                    <span>Available for Opportunities</span>
+                </div>
+                <h1 class="hero-title reveal-up" style="--delay: 0.1s">
+                    Hi, I'm <span class="gradient-text">Lav Kumar Shakya</span>
+                </h1>
+                <p class="hero-subtitle reveal-up" style="--delay: 0.2s">
+                    Computer Science Student — Building <span class="typed-text" id="typed-text"></span><span class="cursor-blink">|</span>
+                </p>
+                <p class="hero-description reveal-up" style="--delay: 0.3s">
+                    Passionate about AI, Machine Learning, Full-Stack Development, and Cyber Security.
+                    Transforming ideas into intelligent, real-world software solutions.
+                </p>
+                <div class="hero-cta reveal-up" style="--delay: 0.4s">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-social reveal-up" style="--delay: 0.5s">
+                    <a href="https://github.com/LavKumarShakya" class="hero-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lav-kumar-shakya-86a87a287" class="hero-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.hackerrank.com/profile/lavshakya514" class="hero-social-link" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
+                        <i class="fab fa-hackerrank"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual reveal-up" style="--delay: 0.3s">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-glow"></div>
+                    <div class="hero-image-ring"></div>
+                    <img src="Personel img/1bg.png" alt="Lav Kumar Shakya" class="hero-img" loading="eager">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator reveal-up" style="--delay: 0.8s">
+            <span>Scroll to explore</span>
+            <div class="scroll-line">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal-up">01 — About</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.1s">Get to know me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal-up" style="--delay: 0.2s">
+                    <p class="about-lead">
+                        I am a Computer Science student focused on building <strong>real-world software</strong> and <strong>AI-powered solutions</strong>.
                     </p>
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">Explore My Work</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-container">
-                        <img src="Personel img/1bg.png" alt="Lav Kumar Shakya" class="profile-img profile-overlay">
-                        <img src="Personel img/1.png" alt="Lav Kumar Shakya" class="profile-img profile-bg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Dedicated CSE undergrad passionate about technology and community building</p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-description">
-                        I'm a dedicated and enthusiastic CSE undergrad with a strong interest in software development, 
-                        technical communities, and continuous learning. As the Technical Coordinator for Google Developer 
-                        Groups (GDG) on Campus, I actively help organize developer-foFed events and sessions, while 
-                        collaborating with peers to spread technical awareness and innovation on campus.
+                    <p>
+                        My interests span Artificial Intelligence, Machine Learning, Full-Stack Development, Cyber Security, and Cloud Technologies. 
+                        I enjoy transforming ideas into useful products and continuously improving my technical skills through projects, competitions, 
+                        certifications, and community involvement.
                     </p>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Technical Coordinator - GDG on Campus, SRMCEM</h4>
-                                <p>Actively engaged in Google Developer community activities, coordinating events and technical initiatives</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Git & GitHub Bootcamp Completion</h4>
-                                <p>Successfully completed LetsUpgrade's 5-day hands-on training in version control and GitHub collaboration</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>B.Tech CSE Student</h4>
-                                <p>Currently pursuing Computer Science & Engineering, expected graduation in 2027</p>
-                            </div>
-                        </div>
+                    <p>
+                        I'm an active learner who participates in technical events, workshops, hackathons, and developer communities. 
+                        I'm particularly passionate about building practical AI applications, RAG systems, intelligent search solutions, 
+                        and modern web applications.
+                    </p>
+                </div>
+                <div class="about-stats reveal-up" style="--delay: 0.3s">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="6">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Achievements</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <!-- ========== SKILLS SECTION ========== -->
+    <section class="section skills" id="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">Languages, tools, and technologies I work with</p>
+                <span class="section-label reveal-up">02 — Skills</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.1s">Technologies I work with</h2>
             </div>
-            
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-<path fill="currentColor" d="M 24 3 C 20.271429 3 18.240267 3.9470561 16.792969 4.5742188 L 16.791016 4.5742188 C 15.488673 5.1421213 14.704771 6.3187748 14.365234 7.4296875 C 14.025697 8.5406002 14 9.6506515 14 10.640625 L 14 14 L 10.640625 14 C 9.6506515 14 8.5406002 14.0257 7.4296875 14.365234 C 6.3187748 14.704771 5.1421212 15.488626 4.5742188 16.791016 L 4.5742188 16.792969 C 3.947056 18.24022 3 20.271429 3 24 C 3 27.728571 3.9470561 29.759733 4.5742188 31.207031 L 4.5742188 31.208984 C 5.1421212 32.511374 6.3187748 33.295229 7.4296875 33.634766 C 8.5406002 33.974256 9.6506515 34 10.640625 34 L 14 34 L 14 37.359375 C 14 38.349349 14.0257 39.459401 14.365234 40.570312 C 14.704771 41.681225 15.488626 42.857879 16.791016 43.425781 L 16.792969 43.425781 C 18.24022 44.052944 20.271429 45 24 45 C 27.728571 45 29.759733 44.052944 31.207031 43.425781 L 31.208984 43.425781 C 32.511374 42.857879 33.295229 41.681225 33.634766 40.570312 C 33.974256 39.459401 34 38.349349 34 37.359375 L 34 34 L 37.359375 34 C 38.349349 34 39.459401 33.9743 40.570312 33.634766 C 41.681225 33.295229 42.857879 32.511374 43.425781 31.208984 L 43.425781 31.207031 C 44.052944 29.75978 45 27.728571 45 24 C 45 20.271429 44.052944 18.240267 43.425781 16.792969 L 43.425781 16.791016 C 42.857879 15.488673 41.681225 14.704771 40.570312 14.365234 C 39.459401 14.025697 38.349349 14 37.359375 14 L 34 14 L 34 10.640625 C 34 9.6506515 33.974303 8.5406002 33.634766 7.4296875 C 33.295229 6.3187748 32.511374 5.1421213 31.208984 4.5742188 L 31.207031 4.5742188 C 29.75978 3.9470561 27.728571 3 24 3 z M 24 6 C 27.268623 6 28.459017 6.6519922 30.009766 7.3242188 C 30.427376 7.5063161 30.590162 7.7325533 30.765625 8.3066406 C 30.941088 8.8807279 31 9.7405985 31 10.640625 L 31 15.253906 A 1.50015 1.50015 0 0 0 31 15.740234 L 31 19 C 31 20.950062 29.450062 22.5 27.5 22.5 L 20.5 22.5 C 16.928062 22.5 14 25.428062 14 29 L 14 31 L 10.640625 31 C 9.7405985 31 8.8807279 30.941088 8.3066406 30.765625 C 7.7325533 30.590162 7.5063162 30.427376 7.3242188 30.009766 C 6.6519921 28.459017 6 27.268623 6 24 C 6 20.731377 6.6519921 19.540983 7.3242188 17.990234 C 7.5063161 17.572624 7.7325533 17.409838 8.3066406 17.234375 C 8.8807279 17.058912 9.7405985 17 10.640625 17 L 23.5 17 A 1.50015 1.50015 0 1 0 23.5 14 L 17 14 L 17 10.640625 C 17 9.7405985 17.058912 8.8807279 17.234375 8.3066406 C 17.409838 7.7325533 17.572624 7.5063162 17.990234 7.3242188 C 19.540983 6.6519921 20.731377 6 24 6 z M 20.5 9 A 1.5 1.5 0 0 0 20.5 12 A 1.5 1.5 0 0 0 20.5 9 z M 34 17 L 37.359375 17 C 38.259401 17 39.119272 17.05891 39.693359 17.234375 C 40.267447 17.409838 40.493684 17.572624 40.675781 17.990234 C 41.348008 19.540983 42 20.731377 42 24 C 42 27.268623 41.348008 28.459017 40.675781 30.009766 C 40.493684 30.427376 40.267447 30.590162 39.693359 30.765625 C 39.119272 30.941088 38.259401 31 37.359375 31 L 24.5 31 A 1.50015 1.50015 0 1 0 24.5 34 L 31 34 L 31 37.359375 C 31 38.259401 30.94109 39.119272 30.765625 39.693359 C 30.590162 40.267447 30.427376 40.493684 30.009766 40.675781 C 28.459017 41.348008 27.268623 42 24 42 C 20.731377 42 19.540983 41.348008 17.990234 40.675781 C 17.572624 40.493684 17.409838 40.267447 17.234375 39.693359 C 17.058912 39.119272 17 38.259401 17 37.359375 L 17 29 C 17 27.049938 18.549938 25.5 20.5 25.5 L 27.5 25.5 C 31.071938 25.5 34 22.571938 34 19 L 34 17 z M 27.5 36 A 1.5 1.5 0 0 0 27.5 39 A 1.5 1.5 0 0 0 27.5 36 z"></path>
-</svg>
+            <div class="skills-categories">
+                <!-- Programming Languages -->
+                <div class="skill-category reveal-up" style="--delay: 0.1s">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i class="fas fa-code"></i></div>
+                        <h3>Programming Languages</h3>
                     </div>
-                    <h3 class="skill-name">Python</h3>
-                    <p class="skill-description">Primary programming language for development and problem solving</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
+                <!-- Web Development -->
+                <div class="skill-category reveal-up" style="--delay: 0.15s">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Web Development</h3>
                     </div>
-                    <h3 class="skill-name">Java</h3>
-                    <p class="skill-description">Object-oriented programming and software development</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2,17 12,22 22,17"></polyline>
-                            <polyline points="2,12 12,17 22,12"></polyline>
-                        </svg>
+                <!-- Databases -->
+                <div class="skill-category reveal-up" style="--delay: 0.2s">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i class="fas fa-database"></i></div>
+                        <h3>Databases</h3>
                     </div>
-                    <h3 class="skill-name">C++</h3>
-                    <p class="skill-description">System programming and competitive programming</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">Vector Databases</span>
+                    </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
+                <!-- AI & ML -->
+                <div class="skill-category reveal-up" style="--delay: 0.25s">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i class="fas fa-brain"></i></div>
+                        <h3>AI & Machine Learning</h3>
                     </div>
-                    <h3 class="skill-name">Web Development</h3>
-                    <p class="skill-description">HTML, CSS, JavaScript for modern web applications</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight-tag">Generative AI</span>
+                        <span class="skill-tag highlight-tag">RAG Systems</span>
+                        <span class="skill-tag highlight-tag">LLM Applications</span>
+                        <span class="skill-tag">Semantic Search</span>
+                        <span class="skill-tag">Embeddings</span>
+                        <span class="skill-tag">Neural Networks</span>
+                    </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
+                <!-- Tools -->
+                <div class="skill-category reveal-up" style="--delay: 0.3s">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Tools & Platforms</h3>
                     </div>
-                    <h3 class="skill-name">Git & GitHub</h3>
-                    <p class="skill-description">Version control and open-source collaboration (Bootcamp certified)</p>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="3"></circle>
-                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                        </svg>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Google Cloud</span>
+                        <span class="skill-tag">Figma</span>
                     </div>
-                    <h3 class="skill-name">Problem Solving</h3>
-                    <p class="skill-description">Algorithmic thinking and competitive programming</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <!-- ========== EXPERIENCE & COMMUNITY ========== -->
+    <section class="section experience" id="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                <span class="section-label reveal-up">03 — Experience</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.1s">Community & Leadership</h2>
             </div>
-            
+            <div class="experience-grid">
+                <!-- GDG -->
+                <div class="experience-card experience-featured reveal-up" style="--delay: 0.15s">
+                    <div class="experience-card-accent"></div>
+                    <div class="experience-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="experience-meta">
+                        <span class="experience-tag">Community</span>
+                    </div>
+                    <h3>Google Developer Groups (GDG)</h3>
+                    <p>Active participant in workshops, events, and AI learning initiatives. Contributing to developer community growth and technical awareness on campus.</p>
+                </div>
+                <!-- AI Seminar -->
+                <div class="experience-card reveal-up" style="--delay: 0.2s">
+                    <div class="experience-card-accent"></div>
+                    <div class="experience-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="experience-meta">
+                        <span class="experience-tag">Event — Oct 2024</span>
+                    </div>
+                    <h3>AI Seminar</h3>
+                    <p>Attended sessions covering AI transformation, Neo4j with Gemini, Building & Evaluating LLM Agents, and AI in Production Systems.</p>
+                    <div class="experience-topics">
+                        <span>AI Transformation</span>
+                        <span>Neo4j + Gemini</span>
+                        <span>LLM Agents</span>
+                        <span>AI in Production</span>
+                    </div>
+                </div>
+                <!-- Gen AI Google -->
+                <div class="experience-card reveal-up" style="--delay: 0.25s">
+                    <div class="experience-card-accent"></div>
+                    <div class="experience-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="experience-meta">
+                        <span class="experience-tag">Program</span>
+                    </div>
+                    <h3>Gen AI Google Program</h3>
+                    <p>Completed multiple Google Cloud learning paths and earned badges through hands-on practical training in Generative AI technologies.</p>
+                </div>
+                <!-- GFG Webinar -->
+                <div class="experience-card reveal-up" style="--delay: 0.3s">
+                    <div class="experience-card-accent"></div>
+                    <div class="experience-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="experience-meta">
+                        <span class="experience-tag">Competition</span>
+                    </div>
+                    <h3>GeeksforGeeks Technical Webinar</h3>
+                    <p>Secured <strong>3rd Position</strong> in the Git & GitHub Quiz Competition, demonstrating strong version control knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal-up">04 — Projects</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.1s">Featured Work</h2>
+            </div>
+            <div class="projects-filter reveal-up" style="--delay: 0.15s">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI / ML</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">GDG Community Leadership</h3>
-                        <div class="project-links">
-                            <a href="https://www.linkedin.com/in/lav-kumar-shakya-86a87a287" class="project-link" aria-label="View LinkedIn profile" target="_blank" rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                    <rect x="2" y="9" width="4" height="12"></rect>
-                                    <circle cx="4" cy="4" r="2"></circle>
-                                </svg>
-                            </a>
+                <!-- RAG Application -->
+                <article class="project-card reveal-up" style="--delay: 0.2s" data-category="ai">
+                    <div class="project-card-inner">
+                        <div class="project-number">01</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>AI-Powered RAG Application</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/LavKumarShakya" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View live project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>Built a Retrieval-Augmented Generation system capable of document ingestion, chunking, semantic search, vector storage, reranking, and AI-powered responses.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>RAG</span>
+                                <span>Vector DB</span>
+                                <span>LLM</span>
+                                <span>Embeddings</span>
+                            </div>
                         </div>
+                        <div class="project-card-glow"></div>
                     </div>
-                    <p class="project-description">
-                        Technical Coordinator at Google Developer Groups on Campus, SRMCEM. Organizing developer-focused 
-                        events, technical sessions, and community engagement initiatives.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Leadership</span>
-                        <span class="tech-tag">Event Management</span>
-                        <span class="tech-tag">Community Building</span>
-                        <span class="tech-tag">Technical Coordination</span>
+                </article>
+                <!-- CampusSathi -->
+                <article class="project-card reveal-up" style="--delay: 0.25s" data-category="ai fullstack">
+                    <div class="project-card-inner">
+                        <div class="project-number">02</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>CampusSathi — AI Chatbot</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/PiyushVerma246/campus_sathi" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://campus-sathi-1.onrender.com/" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View live project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>24×7 AI-powered support chatbot designed for colleges and office environments, featuring Lost & Found Management, Announcements Broadcasting, and workflow automation.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>n8n</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-card-glow"></div>
+                    </div>
+                </article>
+                <!-- Portfolio -->
+                <article class="project-card reveal-up" style="--delay: 0.3s" data-category="web">
+                    <div class="project-card-inner">
+                        <div class="project-number">03</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Portfolio Website</h3>
+                                <div class="project-links">
+                                    <a href="https://lavkumarshakya.github.io/Portfolio/" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://lavkumarshakya.github.io/Portfolio/" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View live project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>Modern personal portfolio featuring responsive design, smooth animations, dark/light mode, modern UI components, and performance optimization.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Responsive</span>
+                            </div>
+                        </div>
+                        <div class="project-card-glow"></div>
+                    </div>
+                </article>
+                <!-- AetherLearn -->
+                <article class="project-card reveal-up" style="--delay: 0.35s" data-category="ai fullstack">
+                    <div class="project-card-inner">
+                        <div class="project-number">04</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>AetherLearn — Learning Platform</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/LavKumarShakya/Solution-Challenge" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://lavkumarshakya.github.io/Solution-Challenge/" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View live project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>Intelligent learning platform focused on personalized education. Built responsive dashboards, integrated AI-powered features for content discovery, and scalable architecture.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>Firebase</span>
+                                <span>AI APIs</span>
+                            </div>
+                        </div>
+                        <div class="project-card-glow"></div>
+                    </div>
+                </article>
+                <!-- CredFlow -->
+                <article class="project-card reveal-up" style="--delay: 0.4s" data-category="blockchain web">
+                    <div class="project-card-inner">
+                        <div class="project-number">05</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>CredFlow — Verification System</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/LavKumarShakya/Reputation_Passport" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://reputation-passport-tan.vercel.app/" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View live project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>Decentralized credential verification platform for secure storage and validation of certificates using smart contracts to ensure tamper-proof issuance and verification workflows.</p>
+                            <div class="project-tech">
+                                <span>Blockchain</span>
+                                <span>Solidity</span>
+                                <span>React</span>
+                                <span>Web3.js</span>
+                            </div>
+                        </div>
+                        <div class="project-card-glow"></div>
+                    </div>
+                </article>
+                <!-- Multi-Agent RL Environment -->
+                <article class="project-card reveal-up" style="--delay: 0.45s" data-category="ai fullstack">
+                    <div class="project-card-inner">
+                        <div class="project-number">06</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Multi-Agent RL Environment</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/LavKumarShakya/Customer-Support" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://huggingface.co/spaces/Intruder1/customer-support-env1" class="project-link-icon" target="_blank" rel="noopener noreferrer" aria-label="View live project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p>Production-grade reinforcement learning environment simulating multi-tier customer support workflows. Built realistic backend tools and scalable FastAPI architecture for benchmarking AI agents.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>OpenEnv</span>
+                                <span>Docker</span>
+                                <span>RL</span>
+                            </div>
+                        </div>
+                        <div class="project-card-glow"></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CERTIFICATIONS SECTION ========== -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal-up">05 — Certifications</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.1s">Professional Credentials</h2>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card reveal-up" style="--delay: 0.15s">
+                    <div class="cert-badge"><i class="fab fa-python"></i></div>
+                    <div class="cert-info">
+                        <h3>Python (Basic) Certificate</h3>
+                        <span class="cert-issuer">HackerRank</span>
+                    </div>
+                    <div class="cert-verified"><i class="fas fa-check-circle"></i> Verified</div>
+                </div>
+                <div class="cert-card reveal-up" style="--delay: 0.2s">
+                    <div class="cert-badge"><i class="fab fa-git-alt"></i></div>
+                    <div class="cert-info">
+                        <h3>Git & GitHub Bootcamp</h3>
+                        <span class="cert-issuer">LetsUpgrade</span>
+                    </div>
+                    <div class="cert-verified"><i class="fas fa-check-circle"></i> Verified</div>
+                </div>
+                <div class="cert-card reveal-up" style="--delay: 0.25s">
+                    <div class="cert-badge"><i class="fab fa-google"></i></div>
+                    <div class="cert-info">
+                        <h3>Google Cloud Skill Badges</h3>
+                        <span class="cert-issuer">Google Cloud</span>
+                    </div>
+                    <div class="cert-verified"><i class="fas fa-check-circle"></i> Verified</div>
+                </div>
+                <div class="cert-card reveal-up" style="--delay: 0.3s">
+                    <div class="cert-badge"><i class="fas fa-robot"></i></div>
+                    <div class="cert-info">
+                        <h3>AI & Development Certifications</h3>
+                        <span class="cert-issuer">Various Platforms</span>
+                    </div>
+                    <div class="cert-verified"><i class="fas fa-check-circle"></i> Verified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ACHIEVEMENTS SECTION ========== -->
+    <section class="section achievements" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal-up">06 — Achievements</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.1s">Milestones & Wins</h2>
+            </div>
+            <div class="achievements-list">
+                <div class="achievement-item reveal-up" style="--delay: 0.15s">
+                    <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="achievement-content">
+                        <h3>HackerRank Python Certified</h3>
+                        <p>Demonstrated proficiency in Python programming through HackerRank's certification assessment.</p>
                     </div>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Morse Code Translator</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/LavKumarShakya/Python_Projects/tree/main/Morse%20Code%20Translator" class="project-link" aria-label="View code" target="_blank" rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Various Python projects focusing on problem-solving, algorithms, and practical applications. 
-                        Demonstrates proficiency in Python programming and software development principles.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Algorithms</span>
-                        <span class="tech-tag">Problem Solving</span>
-                        <span class="tech-tag">Development</span>
+                <div class="achievement-item reveal-up" style="--delay: 0.2s">
+                    <div class="achievement-icon"><i class="fas fa-cloud"></i></div>
+                    <div class="achievement-content">
+                        <h3>Multiple Google Cloud Badges Earned</h3>
+                        <p>Completed hands-on labs and learning paths across Google Cloud Platform, earning skill badges in cloud technologies.</p>
                     </div>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Portfolio Website</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/LavKumarShakya" class="project-link" aria-label="View code" target="_blank" rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                            </a>
-                        </div>
+                <div class="achievement-item reveal-up" style="--delay: 0.25s">
+                    <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                    <div class="achievement-content">
+                        <h3>3rd Place — Git & GitHub Technical Quiz</h3>
+                        <p>Secured 3rd position in the GeeksforGeeks Git & GitHub Quiz Competition.</p>
                     </div>
-                    <p class="project-description">
-                        A responsive, minimalist portfolio website built with vanilla HTML, CSS, and JavaScript, 
-                        featuring smooth animations, dark mode support, and modern design principles.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive Design</span>
+                </div>
+                <div class="achievement-item reveal-up" style="--delay: 0.3s">
+                    <div class="achievement-icon"><i class="fas fa-users"></i></div>
+                    <div class="achievement-content">
+                        <h3>Active Technical Community Contributor</h3>
+                        <p>Regularly contributing to developer communities, participating in technical events, and mentoring peers.</p>
+                    </div>
+                </div>
+                <div class="achievement-item reveal-up" style="--delay: 0.35s">
+                    <div class="achievement-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="achievement-content">
+                        <h3>Built Multiple AI & Full-Stack Projects</h3>
+                        <p>Developed production-quality projects spanning RAG systems, authentication solutions, e-commerce platforms, and more.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certificates Section -->
-    <section class="certificates" id="certificates">
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Certifications</h2>
-                <p class="section-subtitle">Professional achievements and learning milestones</p>
+                <span class="section-label reveal-up">07 — Contact</span>
+                <h2 class="section-title reveal-up" style="--delay: 0.1s">Let's connect</h2>
+                <p class="section-subtitle reveal-up" style="--delay: 0.15s">
+                    Have a project idea, collaboration opportunity, or just want to chat? I'd love to hear from you.
+                </p>
             </div>
-            
-            <div class="certificates-container">
-                <div class="certificates-grid">
-                    <div class="certificate-card">
-                        <div class="certificate-header">
-                            <div class="certificate-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="certificate-content">
-                            <h3 class="certificate-title">Git & GitHub Bootcamp</h3>
-                            <p class="certificate-issuer">LetsUpgrade</p>
-                            <p class="certificate-date">Sep 2024</p>
-                            <a href="#" class="certificate-view-btn" target="_blank" rel="noopener noreferrer">View Certificate</a>
-                        </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-up" style="--delay: 0.2s">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email</h3>
+                        <a href="mailto:lavshakya514@gmail.com">lavshakya514@gmail.com</a>
                     </div>
-                    
-                    <div class="certificate-card">
-                        <div class="certificate-header">
-                            <div class="certificate-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="certificate-content">
-                            <h3 class="certificate-title">Python Programming</h3>
-                            <p class="certificate-issuer">Python Institute</p>
-                            <p class="certificate-date">Aug 2024</p>
-                            <a href="#" class="certificate-view-btn" target="_blank" rel="noopener noreferrer">View Certificate</a>
-                        </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/LavKumarShakya" target="_blank" rel="noopener noreferrer">@LavKumarShakya</a>
                     </div>
-                    
-                    <div class="certificate-card">
-                        <div class="certificate-header">
-                            <div class="certificate-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="certificate-content">
-                            <h3 class="certificate-title">Problem Solving</h3>
-                            <p class="certificate-issuer">HackerRank</p>
-                            <p class="certificate-date">Jun 2024</p>
-                            <a href="#" class="certificate-view-btn" target="_blank" rel="noopener noreferrer">View Certificate</a>
-                        </div>
-                    </div>
-                </div>                <div class="certificates-actions">
-                    <a href="#" class="view-all-certificates-btn" id="view-all-certificates">View All Certificates</a>
-                </div>
-            </div>
-            
-            <!-- Hidden container for modal-only certificates -->
-            <div class="modal-only-certificates" style="display: none;">
-                <!-- Add new certificates here that will ONLY appear in the modal -->
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificate Modal -->
-    <div class="certificate-modal" id="certificate-modal">
-        <div class="modal-overlay" id="modal-overlay"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>All Certifications</h3>
-                <button class="modal-close" id="modal-close" aria-label="Close modal">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-            <div class="modal-certificates-grid" id="modal-certificates-grid">
-                <!-- Certificates will be dynamically populated here -->
-                 <!-- Add modal-only certificates here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's discuss your next project</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>lavshakya514@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/LavKumarShakya" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/lav-kumar-shakya-86a87a287" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/intruder1404?igsh=MTVjc2JzZTJzOTZudg==" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="https://www.hackerrank.com/profile/lavshakya514" class="social-link" aria-label="HackerRank" target="_blank" rel="noopener noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 32 32">
-                                <path d="M 15.998047 3 C 14.225047 3 5.5352031 7.9839062 4.6582031 9.5039062 C 3.7802031 11.024906 3.7802031 20.983047 4.6582031 22.498047 C 5.5392031 24.017047 14.229047 29 15.998047 29 C 17.762047 29 26.451938 24.019953 27.335938 22.501953 C 28.222938 20.979953 28.222938 11.014047 27.335938 9.4980469 L 27.335938 9.4960938 C 26.444937 7.9790937 17.756047 3 15.998047 3 z M 15.996094 5.0117188 C 17.693094 5.3647187 24.417703 9.2167656 25.595703 10.509766 C 26.135703 12.150766 26.134703 19.844281 25.595703 21.488281 C 24.425703 22.779281 17.695094 26.636281 15.996094 26.988281 C 14.298094 26.638281 7.5723906 22.783234 6.4003906 21.490234 C 5.8653906 19.842234 5.8653906 12.155766 6.4003906 10.509766 C 7.5693906 9.2167656 14.297094 5.3617187 15.996094 5.0117188 z M 13 9 L 11 11 L 12 11 L 12 21 L 14 21 L 14 17 L 18 17 L 18 21 L 17 21 L 19 23 L 21 21 L 20 21 L 20 12 L 18 12 L 18 15 L 14 15 L 14 11 L 15 11 L 13 9 z"></path>
-                            </svg>
-                        </a>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/lav-kumar-shakya-86a87a287" target="_blank" rel="noopener noreferrer">Lav Kumar Shakya</a>
                     </div>
                 </div>
-                
-                <div class="contact-form-container">
+                <div class="contact-form-wrapper reveal-up" style="--delay: 0.3s">
                     <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder=" " required>
-                            <label for="name" class="floating-label">Your Name</label>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="contact-name" name="name" required autocomplete="name">
+                                <label for="contact-name">Your Name</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contact-email" name="email" required autocomplete="email">
+                                <label for="contact-email">Your Email</label>
+                                <div class="form-line"></div>
+                            </div>
                         </div>
-                        
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder=" " required>
-                            <label for="email" class="floating-label">Your Email</label>
+                            <textarea id="contact-message" name="message" rows="4" required></textarea>
+                            <label for="contact-message">Your Message</label>
+                            <div class="form-line"></div>
                         </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
-                            <label for="message" class="floating-label">Your Message</label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-submit">
+                        <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
                             <span class="btn-text">Send Message</span>
-                            <span class="btn-loading">Sending...</span>
+                            <span class="btn-loader" style="display:none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                            <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
-                    
-                    <div class="form-success" id="form-success">
-                        <div class="success-icon">✓</div>
-                        <h4>Message Sent Successfully!</h4>
-                        <p>Thank you for reaching out. I'll get back to you soon.</p>
+                    <div class="form-success" id="form-success" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent!</h3>
+                        <p>Thanks for reaching out. I'll get back to you soon.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Footer -->
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Lav Kumar Shakya</h3>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">LKS<span class="logo-dot"></span></span>
                     <p>Building innovative solutions, one line of code at a time.</p>
                 </div>
-                <div class="footer-links">
-                    <div class="social-links">
-                        <a href="#" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="mailto:lav.shakya@example.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                <div class="footer-nav">
+                    <h4>Navigate</h4>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="footer-social-links">
+                        <a href="https://github.com/LavKumarShakya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/lav-kumar-shakya-86a87a287" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/intruder1404" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:lavshakya514@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Lav Kumar Shakya. Crafted with passion and precision.</p>
-                <button class="scroll-top" id="scrollTop">
-                    <i class="fas fa-chevron-up"></i>
+                <p>&copy; 2025 Lav Kumar Shakya. Crafted with passion & precision.</p>
+                <button class="scroll-top-btn" id="scroll-top" aria-label="Scroll to top">
+                    <i class="fas fa-arrow-up"></i>
                 </button>
             </div>
         </div>
